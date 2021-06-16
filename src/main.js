@@ -8207,7 +8207,7 @@ function diffCalc(res,period){
 
     if (global.race['decay']){
         if (global.resource[res].diff < 0){
-            if (breakdown.p.consume[res][loc('evo_challenge_decay')] > global.resource[res].diff){
+            if (+(breakdown.p.consume[res][loc('evo_challenge_decay')]).toFixed(2) > global.resource[res].diff){
                 if (!$(`#res${res} .diff`).hasClass('has-text-danger')){
                     $(`#res${res} .diff`).removeClass('has-text-warning');
                     $(`#res${res} .diff`).addClass('has-text-danger');
